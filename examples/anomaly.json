@@ -1,0 +1,12 @@
+{
+  "observation_id": "OBS-002",
+  "timestamp": "2026-11-24T00:05:00Z",
+  "source": "synthetic-network-monitor",
+  "status": "ANOMALY",
+  "reason": "Predefined anomaly condition matched.",
+  "evidence": [
+    "synthetic-log-002"
+  ],
+  "escalation_required": true,
+  "execution_authorized": false
+}
