@@ -1,0 +1,10 @@
+{
+  "observation_id": "OBS-003",
+  "timestamp": "2026-11-24T00:10:00Z",
+  "source": "synthetic-network-monitor",
+  "status": "UNKNOWN",
+  "reason": "Insufficient evidence to classify the observation as NORMAL or ANOMALY.",
+  "evidence": [],
+  "escalation_required": true,
+  "execution_authorized": false
+}
