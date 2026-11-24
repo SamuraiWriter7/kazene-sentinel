@@ -1,0 +1,12 @@
+{
+  "observation_id": "OBS-001",
+  "timestamp": "2026-11-24T00:00:00Z",
+  "source": "synthetic-network-monitor",
+  "status": "NORMAL",
+  "reason": "Observation satisfies predefined normal conditions.",
+  "evidence": [
+    "synthetic-log-001"
+  ],
+  "escalation_required": false,
+  "execution_authorized": false
+}
