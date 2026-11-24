@@ -1,0 +1,36 @@
+name: Validate KAZENE-Sentinel
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate Observation Protocol
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Check Python version
+        run: python --version
+
+      - name: Check JSON Schema syntax
+        run: python -m json.tool schemas/observation.schema.json > /dev/null
+
+      - name: Check Python syntax
+        run: python -m py_compile scripts/validate.py
+
+      - name: Validate observations and protocol invariants
+        run: python scripts/validate.py
